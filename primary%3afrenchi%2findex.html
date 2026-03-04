@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulces Frenchii | Argentina</title>
+    <style>
+        /* Estilos Globales */
+        body {
+            background-color: #FFC0CB; /* Fondo Rosa */
+            font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #4A4A4A;
+            overflow-x: hidden;
+        }
+
+        /* --- ANIMACIÓN DE ENTRADA (SPLASH SCREEN) --- */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #FFC0CB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeOut 0.8s ease-in-out forwards;
+            animation-delay: 2.5s;
+        }
+
+        #splash-screen img {
+            width: 300px;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: shrinkMove 1s ease-in-out forwards;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes shrinkMove {
+            to {
+                width: 100px;
+                transform: translateY(-40vh);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeOut {
+            to { visibility: hidden; opacity: 0; }
+        }
+
+        /* --- DISEÑO DE LA PÁGINA --- */
+        header {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .logo-header {
+            width: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #D81B60;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .subtitulo {
+            font-weight: bold;
+            color: #880E4F;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.96);
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #AD1457;
+            border-bottom: 2px solid #F8BBD0;
+            padding-bottom: 10px;
+        }
+
+        .producto-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #FCE4EC;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nombre {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .precio {
+            color: #D81B60;
+            font-weight: bold;
+        }
+
+        /* Botón de WhatsApp */
+        .btn-ws {
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-ws:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        .contacto-principal {
+            display: block;
+            text-align: center;
+            background-color: #D81B60;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-top: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding-bottom: 30px;
+            color: #880E4F;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="splash-screen">
+        <img src="frenchii.jpg" alt="Logo Dulces Frenchii">
+    </div>
+
+    <header>
+        <img src="frenchii.jpg" alt="Logo" class="logo-header">
+        <h1>Dulces Frenchii</h1>
+        <div class="subtitulo">Argentina</div>
+    </header>
+
+    <div class="container">
+        <h2>Pasteles dulces y etc</h2>
+
+        <div class="producto-row">
+            <div class="info">
+                <span class="nombre">Torta de Ricota - Normal</span>
+                <span class="precio">17.000$</span>
+            </div>
+            <a href="https://wa.me/5491159096708?text=Hola%20Quiero%20Comprar%20tu%20producto%20Torta%20de%20Ricota%20Normal" class="btn-ws">Consultar</a>
+        </div>
+
+        <div class="producto-row">
+            <div class="info">
+                <span class="nombre">Torta de Ricota - Mitad</span>
+                <span class="precio">9.000$</span>
+            </div>
+            <a href="https://wa.me/5491159096708?text=Hola%20Quiero%20Comprar%20tu%20producto%20Torta%20de%20Ricota%20Mitad" class="btn-ws">Consultar</a>
+        </div>
+
+        <div class="producto-row">
+            <div class="info">
+                <span class="nombre">Pasta Frola</span>
+                <span class="precio">12.000$</span>
+            </div>
+            <a href="https://wa.me/5491159096708?text=Hola%20Quiero%20Comprar%20tu%20producto%20Pasta%20Frola" class="btn-ws">Consultar</a>
+        </div>
+
+        <div class="producto-row">
+            <div class="info">
+                <span class="nombre">Bizcochuelo Budín - Común</span>
+                <span class="precio">7.000$</span>
+            </div>
+            <a href="https://wa.me/5491159096708?text=Hola%20Quiero%20Comprar%20tu%20producto%20Bizcochuelo%20Budin%20Comun" class="btn-ws">Consultar</a>
+        </div>
+
+        <div class="producto-row">
+            <div class="info">
+                <span class="nombre">Carrot Cake</span>
+                <span class="precio">8.000$</span>
+            </div>
+            <a href="https://wa.me/5491159096708?text=Hola%20Quiero%20Comprar%20tu%20producto%20Carrot%20Cake" class="btn-ws">Consultar</a>
+        </div>
+
+        <div class="producto-row">
+            <div class="info">
+                <span class="nombre">Alfajorcitos Blancos & Negros (1/4)</span>
+                <span class="precio">8.000$</span>
+            </div>
+            <a href="https://wa.me/5491159096708?text=Hola%20Quiero%20Comprar%20tu%20producto%20Alfajorcitos%20Blancos%20y%20Negros" class="btn-ws">Consultar</a>
+        </div>
+
+        <div class="producto-row">
+            <div class="info">
+                <span class="nombre">Alfajores de Maicena (1/4)</span>
+                <span class="precio">7.000$</span>
+            </div>
+            <a href="https://wa.me/5491159096708?text=Hola%20Quiero%20Comprar%20tu%20producto%20Alfajores%20de%20Maicena" class="btn-ws">Consultar</a>
+        </div>
+
+        <a href="https://wa.me/5491159096708" class="contacto-principal">
+            📱 Contacto: +54 9 11 5909-6708
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2026 Dulces Frenchii
+    </footer>
+
+</body>
+</html>
